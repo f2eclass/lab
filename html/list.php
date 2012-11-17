@@ -1,6 +1,6 @@
 <?php
 // 注意：以下 PHP 是照片列表資料來源，請勿修改。
-$url = "http://f2eclass.com/service/?method=getPhotoList";
+$url = "http://f2eclass.com/album/service/?method=getPhotoList";
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
