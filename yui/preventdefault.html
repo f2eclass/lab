@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>preventDefault 範例</title>
+<link rel="stylesheet" href="http://yui.yahooapis.com/3.7.2/build/cssreset/reset-min.css">
+<link rel="stylesheet" href="http://yui.yahooapis.com/3.7.2/build/cssfonts/fonts-min.css">
+<script type="text/javascript" src="http://yui.yahooapis.com/3.7.2/build/yui/yui-min.js"></script>
+</head>
+<body>
+    <a href="http://tw.yahoo.com/">點我去Yahoo!</a>
+    <form action="http://www.miiicasa.com">
+        <input type="submit">
+    </form>
+    <a href="#book">#book</a>
+    <script>
+    YUI().use("event", "node", function (Y) {
+        Y.all("a").on("click", function (e) {
+            e.preventDefault();
+            Y.log("點選了...");
+        });
+        Y.one("form").on("submit", function (e) {
+            e.preventDefault();
+        });
+    });
+    </script>
+</body>
+</html>

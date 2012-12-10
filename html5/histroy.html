@@ -1,0 +1,15 @@
+<div>
+http://localhost/lab/html5/histroy.html
+</div>
+<script>
+
+setTimeout(function () {
+    window.history.pushState("HAHA", "HEHE", "/abc");
+    alert("hello");
+}, 1000);
+
+window.addEventListener('popstate', function(event) {
+        console.log(event);
+        console.log(event.state);
+});
+</script>
