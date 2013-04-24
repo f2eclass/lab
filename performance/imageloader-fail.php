@@ -1,5 +1,5 @@
 <?php
-$url = "http://f2eclass.com/service/?method=getPhotoList";
+$url = "http://f2eclass.com/album/service/?method=getPhotoList";
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
